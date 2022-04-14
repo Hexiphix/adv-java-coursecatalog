@@ -8,17 +8,16 @@ import javax.swing.*;
  * @author your name goes here
  * @version 1.00
  */
-public class AdvancedJavaCourse {
+public class AdvancedJavaCourse extends CourseAbstract {
 
-    String courseName;
-    private String courseNumber;
-    private double credits;
     private String prerequisites;
 
     public AdvancedJavaCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
+        super.setCourseName(courseName);
+        super.setCourseNumber(courseNumber);
     }
+
+    /*
 
     public String getCourseName() {
         return courseName;
@@ -36,6 +35,8 @@ public class AdvancedJavaCourse {
         this.courseNumber = courseNumber;
     }
 
+    */
+
     public String getPrerequisites() {
         return prerequisites;
     }
@@ -49,6 +50,8 @@ public class AdvancedJavaCourse {
         this.prerequisites = prerequisites;
     }
 
+    /*
+
     public void setCredits(double credits) {
         if (credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
@@ -58,4 +61,12 @@ public class AdvancedJavaCourse {
         this.setCredits(credits);
     }
 
+    */
+
+    @Override
+    public String toString() {
+        return  super.toString() +"AdvancedJavaCourse{" +
+                "prerequisites='" + prerequisites + '\'' +
+                '}';
+    }
 }

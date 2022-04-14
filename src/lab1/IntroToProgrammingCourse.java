@@ -9,16 +9,14 @@ import javax.swing.*;
  * @author your name goes here
  * @version 1.00
  */
-public class IntroToProgrammingCourse {
-
-    String courseNumber;
-    private String courseName;
-    private double credits;
+public class IntroToProgrammingCourse extends CourseAbstract {
 
     public IntroToProgrammingCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
+        super.setCourseName(courseName);
+        super.setCourseNumber(courseNumber);
     }
+
+    /*
 
     public String getCourseName() {
         return courseName;
@@ -59,4 +57,10 @@ public class IntroToProgrammingCourse {
         this.credits = credits;
     }
 
+    */
+
+    @Override
+    public String toString() {
+        return super.toString() + "IntroToProgrammingCourse{}";
+    }
 }

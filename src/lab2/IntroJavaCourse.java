@@ -6,7 +6,7 @@ package lab2;
  * @author your name goes here
  * @version 1.00
  */
-public class IntroJavaCourse {
+public class IntroJavaCourse implements CourseLike{
 
     String courseName;
     private String courseNumber;
@@ -16,6 +16,15 @@ public class IntroJavaCourse {
     public IntroJavaCourse(String courseName, String courseNumber) {
         this.courseName = courseName;
         this.courseNumber = courseNumber;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    @Override
+    public void setCourseName(String courseName) {
+
     }
 
     public String getCourseNumber() {
@@ -42,4 +51,13 @@ public class IntroJavaCourse {
         this.prerequisites = prerequisites;
     }
 
+    @Override
+    public String toString() {
+        return "IntroJavaCourse{" +
+                "courseName='" + courseName + '\'' +
+                ", courseNumber='" + courseNumber + '\'' +
+                ", credits=" + credits +
+                ", prerequisites='" + prerequisites + '\'' +
+                '}';
+    }
 }
